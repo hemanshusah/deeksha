@@ -11,6 +11,30 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
+export const metadata = {
+  title: "Deeksha Rai - Marketing & Business Development",
+  description: "Portfolio of Deeksha Rai showcasing expertise in marketing, business development, and startup incubation.",
+  openGraph: {
+    title: "Deeksha Rai - Marketing & Business Development",
+    description: "Portfolio of Deeksha Rai showcasing expertise in marketing, business development, and startup incubation.",
+    images: [
+      {
+        url: "/image-main.png",
+        width: 1200,
+        height: 630,
+        alt: "Deeksha Rai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Deeksha Rai - Marketing & Business Development",
+    description: "Portfolio of Deeksha Rai showcasing expertise in marketing, business development, and startup incubation.",
+    images: ["/image-main.png"],
+  },
+};
+
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
