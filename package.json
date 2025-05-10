@@ -2,6 +2,7 @@
   "name": "deeksharai",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@7.5.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -53,6 +54,14 @@
       "@opentelemetry/sdk-trace-base": "1.13.0",
       "@opentelemetry/sdk-trace-node": "1.13.0",
       "@opentelemetry/semantic-conventions": "1.13.0"
-    }
+    },
+
+
+    "onlyBuiltDependencies": [
+      "contentlayer",
+      "esbuild",
+      "protobufjs",
+      "rome"
+    ]
   }
 }
