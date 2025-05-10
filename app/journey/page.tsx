@@ -9,6 +9,8 @@ import { useRouter } from "next/navigation";
 // Client components cannot export metadata directly
 // Metadata should be defined in parent server components
 
+
+
 const journeyData = [
   {
     role: "Manager",
@@ -90,6 +92,16 @@ const journeyData = [
     ]
   }
 ];
+
+
+// ... existing code ...
+export const metadata = {
+  title: "Professional Journey | Deeksha Rai",
+  description: "Explore Deeksha Rai's professional journey and leadership roles in startup incubation and business development."
+};
+// ... existing code ...
+
+
 
 export default function JourneyPage() {
   const [views, setViews] = useState(journeyData[0].views);
