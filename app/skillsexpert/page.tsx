@@ -84,7 +84,7 @@ export default function SkillsExpertPage() {
         </div>
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-zinc-100 mb-5">Tools</h3>
-          <div className="flex flex-nowrap justify-between items-center gap-1 w-full py-2 px-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-4 w-full py-2 px-2">
             {toolLogos.map((tool, index) => (
               <div key={index} className="flex-shrink-0">
                 <div className="w-28 h-28 rounded-xl flex items-center justify-center shadow-sm grayscale hover:grayscale-0 hover:scale-105 hover:shadow-md transition-all duration-300 p-2">
