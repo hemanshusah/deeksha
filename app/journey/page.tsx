@@ -94,14 +94,6 @@ const journeyData = [
 ];
 
 
-// ... existing code ...
-export const metadata = {
-  title: "Professional Journey | Deeksha Rai",
-  description: "Explore Deeksha Rai's professional journey and leadership roles in startup incubation and business development."
-};
-// ... existing code ...
-
-
 
 export default function JourneyPage() {
   const [views, setViews] = useState(journeyData[0].views);
