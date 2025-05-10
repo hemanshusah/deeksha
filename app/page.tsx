@@ -12,11 +12,11 @@ const navigation = [
 ];
 
 export const metadata = {
-  title: "Deeksha Rai - Marketing & Business Development",
-  description: "Portfolio of Deeksha Rai showcasing expertise in marketing, business development, and startup incubation.",
+  title: "Deeksha Rai",
+  description: "I think like a marketer and evaluate like investor",
   openGraph: {
-    title: "Deeksha Rai - Marketing & Business Development",
-    description: "Portfolio of Deeksha Rai showcasing expertise in marketing, business development, and startup incubation.",
+    title: "Deeksha Rai",
+    description: "I think like a marketer and evaluate like investor",
     images: [
       {
         url: "/image-main.png",
@@ -37,7 +37,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <div className="absolute inset-0 transition-all duration-1000" style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/image-back.png')`,
         backgroundSize: 'cover',
@@ -47,7 +47,7 @@ export default function Home() {
       }} />
 
       <div className="relative z-10 flex flex-col items-center">
-        <div className="w-32 h-32 rounded-full border-4 border-white overflow-hidden mb-5 transition-all duration-500 hover:scale-125 hover:shadow-lg hover:shadow-white/20">
+        <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-white overflow-hidden mb-5 transition-all duration-500 hover:scale-125 hover:shadow-lg hover:shadow-white/20">
           <img 
             src="/image-main.png"
             alt="Profile Image"
@@ -87,9 +87,9 @@ export default function Home() {
             <span className="absolute -bottom-1 left-0 w-full h-px bg-zinc-800"></span>
           </h2>
 
-          <div className="my-5 max-w-6xl text-center">
+          <div className="my-5 w-full px-4 max-w-6xl mx-auto text-center">
             <div className="my-10">
-              <h2 className="text-lg text-zinc-400 leading-relaxed mt-4">
+              <h2 className="text-sm sm:text-base md:text-lg text-zinc-400 leading-relaxed mt-4 px-2">
                 With expertise spanning incubation management to commercialised growth, I help transform ideas into thriving ventures through strategic vision and creative execution.
               </h2>
             </div>
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
       
         <div className="mt-2 animate-fade-in opacity-0 animation-delay-2000">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-4 max-w-7xl mx-auto">
             {[
               {
                 title: "Commercialisation",
@@ -113,7 +113,7 @@ export default function Home() {
               }
             ].map((item, index) => (
               <div key={index} className="group relative">
-                <div className="block p-2 w-full md:w-70 rounded-l bg-zinc-800/30 border border-zinc-700/30 backdrop-blur-sm transition-all duration-300 hover:bg-zinc-700/50 hover:scale-105 cursor-pointer">
+                <div className="block p-4 w-full h-full rounded-lg bg-zinc-800/30 border border-zinc-700/30 backdrop-blur-sm transition-all duration-300 hover:bg-zinc-700/50 hover:scale-105 cursor-pointer">
                   <h3 className="text-sm text-zinc-500 group-hover:text-zinc-300 transition-colors duration-300">
                     {item.title}
                   </h3>
