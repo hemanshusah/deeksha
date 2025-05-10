@@ -1,27 +1,33 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
 const socials = [
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/chronark_",
-		label: "Twitter",
-		handle: "@chronark_",
+		icon: <img src="/logos/calendly.png" alt="Calendly" width={20} height={20} />,
+		href: "https://calendly.com/deeksharai014/30min",
+		label: "Calendly",
+		handle: "@deeksharai014",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:dev@chronark.com",
+		href: "mailto:deeksharai014@gmail.com",
 		label: "Email",
-		handle: "dev@chronark.com",
+		handle: "deeksharai014@gmail",
 	},
 	{
-		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
-		label: "Github",
-		handle: "chronark",
+		icon: <Linkedin size={20} />,
+		href: "https://linkedin.com/in/deekshavow",
+		label: "linkedin",
+		handle: "@deekshavow",
+	},
+	{
+		icon: <Phone size={20} />,
+		href: "tel:+91-7985257259",
+		label: "Call",
+		handle: "+91 - 7985257259",
 	},
 ];
 
@@ -30,13 +36,13 @@ export default function Example() {
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
-				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
+				<div className="grid w-full grid-cols-1 gap-4 mx-auto mt-32 sm:mt-0 sm:grid-cols-4 lg:gap-8">
 					{socials.map((s) => (
 						<Card>
 							<Link
 								href={s.href}
 								target="_blank"
-								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
+								className="p-2 relative flex flex-col items-center gap-2 duration-700 group md:gap-4 md:py-12 lg:pb-24 md:p-8"
 							>
 								<span
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"

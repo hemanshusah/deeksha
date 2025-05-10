@@ -18,7 +18,7 @@ const computedFields = {
 
 export const Project = defineDocumentType(() => ({
 	name: "Project",
-	filePathPattern: "./projects/**/*.mdx",
+	filePathPattern: "projects/**/*.mdx",
 	contentType: "mdx",
 
 	fields: {
@@ -62,9 +62,53 @@ export const Page = defineDocumentType(() => ({
 	computedFields,
 }));
 
+
+export const Journey = defineDocumentType(() => ({
+	name: "Journey",
+	filePathPattern: "journey/**/*.mdx",
+	contentType: "mdx",
+	fields: {
+		published: {
+			type: "boolean",
+		},
+		title: {
+			type: "string",
+			required: true,
+		},
+		description: {
+			type: "string",
+			required: true,
+		},
+		date: {
+			type: "date",
+		},
+		url: {
+			type: "string",
+		},
+		repository: {
+			type: "string",
+		},
+	},
+	computedFields,
+}));
+
+export const SkillExpert = defineDocumentType(() => ({
+	name: "SkillExpert",
+	filePathPattern: "skillsexpert/**/*.mdx",
+	contentType: "mdx",
+	fields: {
+		title: { type: "string", required: true },
+		description: { type: "string", required: true },
+		level: { type: "string" },
+	},
+	computedFields,
+}));
+
+
+
 export default makeSource({
-	contentDirPath: "./content",
-	documentTypes: [Page, Project],
+	contentDirPath: "content",
+	documentTypes: [Page, Project, Journey, SkillExpert],
 	mdx: {
 		remarkPlugins: [remarkGfm],
 		rehypePlugins: [
