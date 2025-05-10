@@ -56,7 +56,7 @@ export default function Home() {
         </div>
 
         <nav className="my-5 animate-fade-in opacity-0 animation-delay-1000">
-          <ul className="flex items-center justify-center gap-10">
+          <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
             {navigation.map((item) => (
               <Link
                 key={item.href}
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
       
         <div className="mt-2 animate-fade-in opacity-0 animation-delay-2000">
-          <div className="flex items-center justify-center gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
             {[
               {
                 title: "Commercialisation",
@@ -113,7 +113,7 @@ export default function Home() {
               }
             ].map((item, index) => (
               <div key={index} className="group relative">
-                <div className="block p-2 w-70 rounded-l bg-zinc-800/30 border border-zinc-700/30 backdrop-blur-sm transition-all duration-300 hover:bg-zinc-700/50 hover:scale-105 cursor-pointer">
+                <div className="block p-2 w-full md:w-70 rounded-l bg-zinc-800/30 border border-zinc-700/30 backdrop-blur-sm transition-all duration-300 hover:bg-zinc-700/50 hover:scale-105 cursor-pointer">
                   <h3 className="text-sm text-zinc-500 group-hover:text-zinc-300 transition-colors duration-300">
                     {item.title}
                   </h3>
