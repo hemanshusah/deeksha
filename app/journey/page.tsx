@@ -93,6 +93,27 @@ const journeyData = [
   }
 ];
 
+const internshipData = [
+  {
+    heading: "Make a Difference",
+    description: "Academic Support Trainer",
+    achievements: [
+      "Completed 120-hour leadership training and trained 15 colleagues",
+      "Led Dream Camp 2019 for 75+ students and 12 volunteers",
+      "Improved student literacy scores by 35% through adaptive instruction"
+    ]
+  },
+  {
+    heading: "Blank Noise",
+    description: "Social Service Caseworker",
+    achievements: [
+      "Collaborated with noted activists on advocacy campaigns",
+      "Analyzed data from 20+ assault survivors for care planning",
+      "Led city-level campaigns engaging 50+ participants"
+    ]
+  }
+];
+
 
 
 export default function JourneyPage() {
@@ -148,6 +169,23 @@ export default function JourneyPage() {
             </div>
           </a>
           ))}
+          
+          <div className="w-full mt-16">
+            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl mb-8">Internship</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {internshipData.map((internship, index) => (
+                <div key={index} className="bg-zinc-900/70 rounded-xl border border-zinc-700 shadow-lg p-8 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:border-zinc-200">
+                  <h3 className="text-xl font-bold text-white mb-2">{internship.heading}</h3>
+                  <p className="text-zinc-300 mb-4">{internship.description}</p>
+                  <ul className="list-disc list-inside space-y-2 text-zinc-300/90">
+                    {internship.achievements.map((achievement, idx) => (
+                      <li key={idx}>{achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
