@@ -25,17 +25,12 @@ export const metadata = {
         alt: "Deeksha Rai",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Deeksha Rai - Marketing & Business Development",
-    description: "Portfolio of Deeksha Rai showcasing expertise in marketing, business development, and startup incubation.",
-    images: ["/image-main.png"],
-  },
+  }
 };
 
 
 export default function Home() {
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen w-full overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <div className="absolute inset-0 transition-all duration-1000" style={{
@@ -54,6 +49,8 @@ export default function Home() {
             className="w-full h-full object-cover"
           />
         </div>
+
+
 
         <nav className="my-5 animate-fade-in opacity-0 animation-delay-1000">
           <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
@@ -130,5 +127,15 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+    
+          );
+
+  {/* Lightbox at bottom left */}
+  <div className="fixed left-4 bottom-4 z-50">
+    <div className="flex items-center bg-zinc-800/85 text-white rounded-xl px-3.5 py-1.5 shadow-sm text-sm font-normal gap-2">
+      <span className="mr-1">made with love</span>
+      <span className="text-red-500 text-lg mr-1">❤</span>
+      <img src="/complogo/dazu.png" alt="dazu logo" className="h-5.5 w-auto inline align-middle ml-0.5" />
+    </div>
+  </div>
 }
