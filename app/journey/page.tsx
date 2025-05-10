@@ -4,7 +4,7 @@ import { Navigation } from "../components/nav";
 import { Eye } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-export const revalidate = 60;
+
 
 // Client components cannot export metadata directly
 // Metadata should be defined in parent server components
@@ -95,7 +95,7 @@ export default function JourneyPage() {
   const [views, setViews] = useState(journeyData[0].views);
   const router = useRouter();
   
-  const handleCardClick = (link) => {
+  const handleCardClick = (link: string) => {
     setViews((v) => v + 1);
     router.push(link);
   };
